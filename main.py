@@ -18,7 +18,11 @@ def simple_work_calc(n, a, b):
 	Returns: the value of W(n).
 	"""
 	# TODO
+	if n <= 1:
+		return(1)
+	return(a * simple_work_calc(n // b, a, b) + n) 
 	pass
+
 
 def work_calc(n, a, b, f):
 	"""Compute the value of the recurrence $W(n) = aW(n/b) + f(n)
@@ -33,7 +37,12 @@ def work_calc(n, a, b, f):
 	Returns: the value of W(n).
 	"""
 	# TODO
+	if n <= 1: 
+		return f(n)  
+	return a * work_calc(n // b, a, b, f) + f(n) 
 	pass
+
+	
 
 def span_calc(n, a, b, f):
 	"""Compute the span associated with the recurrence $W(n) = aW(n/b) + f(n)
@@ -48,6 +57,10 @@ def span_calc(n, a, b, f):
 	Returns: the value of W(n).
 	"""
 	# TODO
+	if n <= 1: 
+		return f(n)
+	return a * span_calc(n // b, a, b, f) + f(n) 
+	
 	pass
 
 
@@ -75,9 +88,9 @@ def compare_work(work_fn1, work_fn2, sizes=[10, 20, 50, 100, 1000, 5000, 10000])
 def print_results(results):
 	""" done """
 	print(tabulate.tabulate(results,
-							headers=['n', 'W_1', 'W_2'],
-							floatfmt=".3f",
-							tablefmt="github"))
+				headers=['n', 'W_1', 'W_2'],
+				floatfmt=".3f",
+				tablefmt="github"))
 
 
 
