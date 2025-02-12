@@ -43,6 +43,14 @@ where $W(1) = 1$.
 
 **TODO: your answer goes here**
 
+n=10: function 1=36, function 2=174
+n=20: function 1=92, function 2=748
+n=50: function 1=276, function 2=4790
+n=100: function 1=652, function 2=19580
+n=1000: function 1=9120, function 2=1990744
+n=5000: function 1=61728, function 2=49957880
+n=10000: function 1=133456, function 2=199915760
+
 - [ ] 6. (3 points) $W(n)$ is meant to represent the running time of some recursive algorithm. Suppose we always had $a$ processors available to us and we wanted to compute the span of the same algorithm. Implement the function `span_calc` to compute the empirical span, where the work of the algorithm is given by $W(n)$. Implement `test_compare_span` to create a new comparison function for comparing span functions. Derive the asymptotic expressions for the span of the recurrences you used in problem 4 above. Confirm that everything matches up as it should. 
 
 **TODO: your answer goes here**
