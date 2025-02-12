@@ -88,9 +88,9 @@ def compare_work(work_fn1, work_fn2, sizes=[10, 20, 50, 100, 1000, 5000, 10000])
 def print_results(results):
 	""" done """
 	print(tabulate.tabulate(results,
-				headers=['n', 'W_1', 'W_2'],
-				floatfmt=".3f",
-				tablefmt="github"))
+							headers=['n', 'W_1', 'W_2'],
+							floatfmt=".3f",
+							tablefmt="github"))
 
 
 
@@ -109,9 +109,8 @@ def compare_span(span_fn1, span_fn2, sizes=[10, 20, 50, 100, 1000, 5000, 10000])
 		# compute W(n) using current a, b, f
 		result.append((
 			n,
-			span_fn1,
-			span_fn2
+			span_fn1(n),
+			span_fn2(n)
 			))
 	return result
 	
-
